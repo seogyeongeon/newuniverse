@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "react-router-dom": "^6.22.1"
+  },
+  "name": "newuniverse",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seogyeongeon/newuniverse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seogyeongeon/newuniverse/issues"
+  },
+  "homepage": "https://github.com/seogyeongeon/newuniverse#readme",
+  "description": ""
+}
