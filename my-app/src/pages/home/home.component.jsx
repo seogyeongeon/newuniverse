@@ -1,11 +1,8 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div >
-      test
-    </div>
+    <h2>Home</h2>
   )
 };
 
