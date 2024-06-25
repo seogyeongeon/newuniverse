@@ -1,0 +1,14 @@
+.root {
+  padding-top: 48px;
+
+  ul {
+    display: flex;
+    height: 48px;
+  }
+
+  li {
+    padding: 0 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}

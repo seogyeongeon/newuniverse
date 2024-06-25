@@ -2,7 +2,8 @@ import React from 'react';
 
 const Introduce = () => {
   return (
-    <h2>contents</h2>
+    <h2>Introduce</h2>
+
   )
 };
 

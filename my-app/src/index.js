@@ -7,6 +7,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 // root.js
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// require("dotenv").config();
+
 root.render(
   <BrowserRouter>
     <React.StrictMode>
