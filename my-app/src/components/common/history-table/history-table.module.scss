@@ -20,34 +20,6 @@
     }
   }
 
-  &.player {
-    .track {
-      background-color: #ebedf0;
-
-      background: linear-gradient(90deg, red 50%, green 0);
-      /* 웹킷용 벤더프리픽스와 그외 벤더프리픽스는 각도에 따른 그라데이션 진행반향이 다르다. */
-      // background: -webkit-linear-gradient(0deg, red 50%, green 0);
-      // background: -moz-linear-gradient(0deg, red 50%, green 0);
-      background-size: 30px 100%;
-
-
-      .fill {
-        background-color: #40c463;
-        // transition: width 200ms linear;
-      }
-    }
-
-    .start,
-    .end {
-      z-index: 2;
-      position: absolute;
-      width: 2px;
-      height: 6px;
-      top: 0px;
-      transform: translateX(-1px);
-      background-color: green;
-    }
-  }
 
 
 

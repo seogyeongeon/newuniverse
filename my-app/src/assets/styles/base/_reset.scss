@@ -231,7 +231,6 @@ button {
   }
 }
 
-// 버튼, 입력 요소에 클릭 or tab키로 포커스 되었을 때 아웃라인 제거
 button:focus,
 textarea:focus,
 input[type='text']:focus {
