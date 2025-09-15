@@ -1,0 +1,15 @@
+@mixin line-clamp($line-height, $line-count) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  white-space: normal;
+  line-height: $line-height;
+  max-height: $line-height * $line-count;
+  text-align: left;
+  word-wrap: break-word;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: $line-count;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,67 @@
+@import '../../../assets/styles/utils/mixins';
+
+.root {
+  display: flex;
+  border: 1px solid #d0d7de;
+  padding: 16px;
+  // margin: 10px;
+
+  .detail {
+    flex: 1;
+    // margin-left: 20px;
+    overflow: hidden;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 4px;
+      padding-right: 10px;
+
+      @include line-clamp(20px, 1);
+
+      flex: 1;
+      font-size: 14px;
+      font-weight: 600;
+
+      cursor: pointer;
+
+      position: relative;
+
+      &>span {
+        color: #0969da;
+      }
+    }
+
+    .info,
+    .tool {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #636c76;
+    }
+
+    .tool {
+      position: relative;
+      padding-left: 15px;
+
+      &.javascript {
+        &:before {
+          background-color: #f1e05a;
+        }
+      }
+
+      &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        background-color: red;
+      }
+    }
+  }
+}

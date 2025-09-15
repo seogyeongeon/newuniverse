@@ -1,0 +1,55 @@
+@import '../../../assets/styles/utils/mixins';
+
+.root {
+  padding: 10px;
+  border: 1px solid #d0d7de;
+  margin-top: 48px;
+
+  .title {
+    color: #1f2328;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    max-width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(11, 20px);
+    /* 한 달 최대 31일 */
+    grid-template-rows: repeat(1, 20px);
+    /* 월/요일 수에 맞게 조정 */
+    gap: 4px;
+  }
+
+  .cell {
+    width: 20px;
+    height: 20px;
+    background-color: #ebedf0;
+    /* 기본 회색 */
+    border-radius: 3px;
+  }
+
+  /* 활동 레벨 색상 */
+  .level1 {
+    background-color: #c6e48b;
+  }
+
+  .level2 {
+    background-color: #7bc96f;
+  }
+
+  .level3 {
+    background-color: #239a3b;
+  }
+
+  .level4 {
+    background-color: #196127;
+  }
+}

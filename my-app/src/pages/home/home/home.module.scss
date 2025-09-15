@@ -1,0 +1,49 @@
+.root {
+  width: 100%;
+  height: 100%;
+
+  .historyItems {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    .history {
+      background-color: pink;
+    }
+  }
+
+  .container {
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    gap: 10px 10px;
+    display: grid;
+    place-content: start center;
+    place-items: start;
+    width: 100%;
+
+    // display: flex;
+    // flex-wrap: wrap;
+  }
+
+
+  .graph {
+    width: 300px;
+    height: 300px;
+    // background-color: royalblue;
+    position: relative;
+
+    .line {
+      border-left: thick solid #000;
+      height: 100%;
+      left: 50%;
+      position: absolute;
+
+      &.horizon {
+        border-left: 0;
+        border-top: thick solid #000;
+        width: 100%;
+        left: 0;
+        top: 50%;
+      }
+    }
+  }
+}

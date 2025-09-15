@@ -2,7 +2,12 @@
 
 .app {
   height: 100vh;
+  /* display: flex; */
+}
+
+.content {
   display: flex;
+  height: 100%;
 }
 
 .body {
