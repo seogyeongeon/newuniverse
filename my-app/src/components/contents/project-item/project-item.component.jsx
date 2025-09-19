@@ -13,41 +13,41 @@ const ProjectItem = ({ item, showImg }) => {
   const id = item?.id;
 
   const handleClick = () => {
-    history.push(`/project/${id}`); // id를 URL에 포함시켜 이동
+    history.push(`/project/${id}`);
   };
 
   return (
-    <div
+    <article
       className={clsx(styles.root, showImg && styles.showImg)}
-      onClick={handleClick}
     >
-      {showImg && (
-        <div>
-          <div className={clsx(styles.imgWrap, !!!item?.thumbnail && styles.default)}>
-            <img src={item?.thumbnail || defaultImg} alt="" />
+      <button
+        type="button"
+        onClick={handleClick}
+        className={styles.button}
+        aria-label={`View project details for ${title}`}
+      >
+        {showImg && (
+          <div className={clsx(styles.imgWrap, !item?.thumbnail && styles.default)}>
+            <img
+              src={item?.thumbnail || defaultImg}
+              alt={item?.thumbnail ? `${title} thumbnail` : "Default thumbnail"}
+              loading="lazy"
+            />
           </div>
-        </div>
+        )}
 
-      )}
-
-      <div className={styles.detail}>
-
-        <div className={styles.title}>
-          <FiAirplay /><span> {title}</span>
+        <div className={styles.detail}>
+          <h3 className={styles.title}>
+            <FiAirplay aria-hidden="true" />
+            <span>{title}</span>
+          </h3>
+          <p className={styles.info}>
+            Forked from iamshaunjp/react-context-hooks. All the course files for the React Context API & Hooks tutorial series on the Net Ninja YouTube channel.
+          </p>
+          <span className={clsx(styles.tool, [tool])}>{tool}</span>
         </div>
-        <div className={styles.info}>
-          Forked from iamshaunjp/react-context-hooks
-
-          All the course files for the React Context API & Hooks tutorial series on the Net Ninja YouTube channel.
-        </div>
-        <div className={clsx(
-          styles.tool,
-          [item?.tool],
-        )}>
-          {tool}
-        </div>
-      </div>
-    </div>
+      </button>
+    </article>
   );
 };
 

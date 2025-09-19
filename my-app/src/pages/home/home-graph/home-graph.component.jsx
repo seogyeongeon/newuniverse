@@ -88,61 +88,54 @@ export default function HomeGrapth() {
 
   return (
     <div className={styles.root}>
-      <div className={styles.title}>0 contributions in 2025</div>
+      <h2 className={styles.title}>706 contributions in 2025</h2>
 
-      <div className={styles.container}>
-
+      <div className={styles.container} role="grid" aria-label="Contributions calendar">
         {/* 월 헤더 */}
-        <div className={styles.headerRow}>
-          <div className={styles.emptyCell} />
+        <div className={styles.headerRow} role="row">
+          <div className={styles.emptyCell} aria-hidden="true" />
           {months.map((month, idx) => (
-            <div key={idx} className={styles.headerCell}>{month}</div>
+            <div key={idx} className={styles.headerCell} role="columnheader">{month}</div>
           ))}
         </div>
 
         {/* 요일 + LED 그리드 */}
         {days.map((day, rIdx) => (
-          <div key={rIdx} className={styles.calendarRow}>
-            <div className={styles.dayCell}>{day}</div>
+          <div key={rIdx} className={styles.calendarRow} role="row">
+            <div className={styles.dayCell} role="rowheader">{day}</div>
             {matrix[rIdx].map((cell, cIdx) => {
               const color = cell === 1 ? colors[Math.floor(Math.random() * colors.length)] : "#eff2f5";
-
               return (
                 <div
                   key={cIdx}
+                  aria-hidden="true"
                   className={clsx(styles.cell, cell === 1 && styles.active)}
                   style={{
                     backgroundColor: color,
                     transitionDelay: animating ? `${cIdx * 30}ms` : "0ms"
-                  }} />
-                // style={{ transitionDelay: animating ? `${cIdx * 30}ms` : "0ms" }}
-                // style={{ transitionDelay: `${cIdx * 30}ms` }} // 순차적으로 켜짐
+                  }}
+                />
               );
-            }
-            )}
+            })}
           </div>
         ))}
 
-        <div className={styles.footer}>
-          <div className={styles.left}>Learn how we count contributions</div>
+        <footer className={styles.footer}>
+          <p className={styles.left}>Learn how we count contributions</p>
           <div className={styles.right}>
             <span>Less</span>
-            <div className={styles.wrap}>
-              {colors.map((item, index) => {
-                return (
-                  <div
-                    style={{
-                      backgroundColor: colors[index],
-                    }}
-                    className={clsx(styles.cell)}
-                  />
-                );
-              })}
-
+            <div className={styles.wrap} aria-hidden="true">
+              {colors.map((item, index) => (
+                <div
+                  key={index}
+                  style={{ backgroundColor: item }}
+                  className={styles.cell}
+                />
+              ))}
             </div>
             <span>More</span>
           </div>
-        </div>
+        </footer>
       </div>
     </div>
   );

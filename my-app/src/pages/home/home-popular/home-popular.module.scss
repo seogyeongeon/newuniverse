@@ -1,7 +1,12 @@
 .root {
-  width: 100%;
-  min-height: 100%;
-  // padding: 2rem 1rem;
+
+  .projectWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
 
   .btn {
     font-size: 0.875rem;
@@ -15,13 +20,6 @@
     }
   }
 
-  .projectWrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-  }
-
   .title {
     font-size: 1rem;
     font-weight: 500;
@@ -31,7 +29,7 @@
 
   .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr)); // 280px → rem
     gap: 1rem;
     justify-items: center;
     width: 100%;

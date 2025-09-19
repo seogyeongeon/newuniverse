@@ -1,9 +1,9 @@
 @import '../../../assets/styles/utils/mixins';
 
 .root {
-  margin-top: 48px;
+  margin-top: 3rem; // 48px → rem
 
-  .date {
+  .range {
     margin-top: 0px;
     position: absolute;
     top: -27px;
@@ -21,24 +21,22 @@
   }
 
   .title {
-    line-height: 24px;
-    flex: 1;
-    font-weight: 400;
     font-size: 1rem;
     font-weight: 500;
+    line-height: 1.5rem;
     color: #1f2328;
   }
 
   .items {
     position: relative;
-    margin-top: 50px;
-    padding-left: 30px;
+    margin-top: 3rem; // 50px;
+    padding-left: 1.875rem; // 30px → rem
   }
 
   .item {
     position: relative;
-    margin-bottom: 52px;
-    border-left: 2px solid #ddd;
+    margin-bottom: 3.25rem; // 52px
+    border-left: 0.125rem solid #ddd; // 2px
 
     &:last-child {
       margin-bottom: 0;
@@ -47,54 +45,54 @@
 
   .dot {
     position: absolute;
-    left: -8px;
-    top: 13px;
-    width: 14px;
-    height: 14px;
+    left: -0.5rem; // -8px
+    top: 0.8125rem; // 13px
+    width: 0.875rem; // 14px
+    height: 0.875rem;
     background: #fff;
-    border: 2px solid #007aff;
+    border: 0.125rem solid #007aff;
     border-radius: 50%;
   }
 
-  .content {
-    margin-left: 20px;
-    padding-top: 8px;
+  .container {
+    margin-left: 1.25rem; // 20px
+    padding-top: 0.5rem; // 8px;
   }
 
-  .company {
+  .title {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 16px;
-    line-height: 24px;
-    font-weight: 400;
+    margin-bottom: 1rem; // 16px;
     font-size: 1rem;
     font-weight: 500;
+    line-height: 1.5rem; // 24px;
     color: #1f2328;
   }
 
   .role {
-    font-size: 14px;
+    font-size: 0.875rem; // 14px;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem; //10px;
     color: #444;
   }
 
   .tasks {
     margin: 0;
-    padding-left: 18px;
+    padding-left: 1.125rem; // 18px
     list-style: disc;
-    font-size: 14px;
+    font-size: 0.875rem; // 14px
     color: #333;
     line-height: 1.6;
   }
 
-  .footer {
-    margin-top: 12px;
-    font-size: 13px;
-    color: #444;
-  }
 
-  .footer p {
-    margin: 4px 0;
+  @media (max-width: 768px) {
+    .items {
+      padding-left: 0;
+    }
+
+    .dot {
+      left: -0.25rem;
+    }
   }
 }
