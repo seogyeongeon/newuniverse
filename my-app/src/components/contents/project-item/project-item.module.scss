@@ -7,10 +7,7 @@
   padding: 1rem;
   border-radius: 0.375rem;
   background-color: #fff;
-
-  &:focus-within {
-    outline: 2px solid #0969da; // 접근성 focus 스타일
-  }
+  transition: all 0.3s;
 
   &.showImg {
     flex-direction: column;
@@ -25,7 +22,7 @@
 
   .imgWrap {
     width: 100%;
-    max-width: 28rem; // 450px → rem 변환
+    max-width: 28rem; // 450px → rem
     height: 15.625rem; // 250px → rem
     overflow: hidden;
     margin-bottom: 0.625rem;
@@ -37,7 +34,6 @@
 
     .title {
       @include line-clamp(1, 1.25rem);
-
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -88,12 +84,46 @@
     }
   }
 
-  @media (max-width: 768px) {
+  // --------------------
+  // 반응형
+  // --------------------
+  @media (max-width: 1210px) {
     flex-direction: column;
 
     .imgWrap {
       max-width: 100%;
       height: auto;
+    }
+
+    .detail {
+      .title {
+        font-size: 0.875rem;
+      }
+
+      .info,
+      .tool {
+        font-size: 0.8125rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.75rem;
+
+    .imgWrap {
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+
+    .detail {
+      .title {
+        font-size: 0.8125rem;
+      }
+
+      .info,
+      .tool {
+        font-size: 0.75rem;
+      }
     }
   }
 }

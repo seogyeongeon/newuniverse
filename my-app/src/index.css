@@ -16,6 +16,7 @@
   align-items: flex-start;
 
   overflow-y: auto;
+  overflow-x: hidden;
   scrollbar-gutter: stable;
 }
 
@@ -39,4 +40,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    padding-top: 357px;
+    align-items: center;
+    padding-bottom: 48px;
+
+  }
 }

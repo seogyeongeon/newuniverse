@@ -81,4 +81,23 @@
       opacity: 0.6;
     }
   }
+
+
+  @media (max-width: 1210px) {
+
+    .title,
+    .container {
+      display: none;
+      // width: 500px;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    .title,
+    .container {
+      display: none;
+      // width: 500px;
+    }
+  }
 }

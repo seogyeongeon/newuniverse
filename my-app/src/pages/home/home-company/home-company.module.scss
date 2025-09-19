@@ -88,8 +88,13 @@
 
 
   @media (max-width: 768px) {
+    .range {
+      left: 0;
+    }
+
     .items {
       padding-left: 0;
+      margin-top: 2.5rem;
     }
 
     .dot {
