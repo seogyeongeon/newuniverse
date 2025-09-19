@@ -1,111 +1,71 @@
 .root {
-  min-width: 320px;
-  width: 320px;
-  height: 100%;
-  // border: 1px solid black;
+  width: 100%;
+  max-width: 320px;
+  margin-right: 26px;
   display: flex;
-  justify-content: center;
-  display: block;
-  position: relative;
-  overflow: hidden;
-
-  // margin-top: 32px;
-  // padding-top: 32px;
-  margin-right: 14px;
-
-  .desc {
-    word-break: keep-all;
-    text-align: left;
-    margin-top: 10px;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: var(--base-text-weight-light, 300);
-    line-height: 24px;
-    color: black;
-    margin-top: 32px;
-  }
+  flex-direction: column;
 
   .profile {
     display: flex;
-    // align-items: center;
     flex-direction: column;
 
     .thumbnail {
-      width: 300px;
-      height: 300px;
+      width: 100%;
       border-radius: 50%;
-      overflow: hidden;
-      background-color: #eee;
-      // border: 2px solid #e1e1e1;
-      border: 2px solid hsla(0, 0%, 88%, 0.884);
-
-      &>img {
-        width: 100%;
-        height: 100%;
-      }
+      object-fit: cover;
+      border: 2px solid #e0e0e0e1;
     }
 
     .info {
       margin: 16px 0;
-      color: #59636e;
-      text-align: left;
-      margin-bottom: 30px;
+      margin-top: 1rem;
 
       .name {
-        font-size: 24px;
-        line-height: 1.25;
+        font-size: 1.5rem;
         font-weight: 700;
       }
 
       .email {
         margin-top: 10px;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: var(--base-text-weight-light, 300);
-        line-height: 24px;
-      }
-    }
-
-    .btn {
-      width: 80%;
-      height: 30px;
-      position: relative;
-      display: inline-block;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 20px;
-      cursor: pointer;
-      border: 1px solid;
-      border-radius: 6px;
-      margin-bottom: 16px;
-    }
-
-
-    .hobbyItems {
-      display: flex;
-      width: 100%;
-      flex-wrap: wrap;
-      line-height: 1.2;
-
-      .item {
-        font-size: 16px;
-        color: #1f2328;
+        font-size: 1.2rem;
+        color: #59636e;
+        font-weight: 300;
       }
 
-      .item+.item {
-        position: relative;
-        padding-left: 20px;
-
-        &:before {
-          position: absolute;
-          display: block;
-          content: '|';
-          width: 10px;
-          height: 100%;
-          left: 10px;
-        }
+      .desc {
+        font-size: 1rem;
+        color: #111827;
+        margin: 1.5rem 0 1rem;
+        word-break: keep-all;
+        text-align: left;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.5;
       }
     }
   }
 
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    a,
+    div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1rem;
+      color: #111827;
+      text-decoration: none;
+    }
+
+    a>span {
+      color: #0969da;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

@@ -1,81 +1,49 @@
 .root {
   background-color: #f6f8fa;
+  padding: 0 20px;
 
-  .profileNav {
+  .items {
     display: flex;
-    align-items: center;
-    padding: 0px 20px;
-    font-family: Arial, sans-serif;
-  }
-
-  .profileInfo {
-    display: flex;
-    align-items: center;
-  }
-
-  .avatar {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    margin-right: 8px;
-  }
-
-  .username {
-    font-weight: bold;
-    font-size: 14px;
-  }
-
-  .tabs {
-    height: 48px;
-    border-bottom: 1px solid #d0d7de;
+    flex-wrap: wrap;
+    gap: 1.5rem; // 30px;
     list-style: none;
-    display: flex;
     margin: 0;
     padding: 0;
-    // gap: 20px;
-    gap: 30px;
+    border-bottom: 1px solid #d0d7de;
   }
 
-  .tabItem {
-    position: relative;
-    font-size: 14px;
-    color: #57606a;
+  .item button {
+    font-size: 1rem; // 14px;
     cursor: pointer;
-    padding: 8px 0;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 0.5rem;
+    color: #57606a;
+    padding: 0.5rem 0; // 8px
+    position: relative;
 
-    letter-spacing: 1px;
-
-    &:hover {
+    &:hover,
+    &.active {
       color: #24292f;
     }
 
-    &.active {
-      // font-weight: 600;
-      text-shadow: 0 0 1px #000; // 살짝 두껍게 보이는 효과
-      color: #24292f;
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: #f78166;
-        /* GitHub 오렌지색 언더라인 */
-        border-radius: 2px;
-      }
+    &.active:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #f78166;
+      border-radius: 2px;
     }
   }
 
   .count {
     background: #d1d1d1;
     color: #24292f;
-    font-size: 12px;
-    padding: 2px 6px;
-    border-radius: 20px;
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
   }
 }

@@ -41,18 +41,15 @@ const developerPattern = {
   ]
 };
 
-// const word = "DEVELOPER";
 const wordList = ["DEVELOPER", "PUBLISHER"];
 // PUBLISHER
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
-// const colors = ["#aceebb", "#4ac26b", "#2da44e", "#116329"]; // LED 랜덤 색상
 const colors = ["#4ac26b", "#2da44e", "#116329"]; // LED 랜덤 색상
 
 export default function HomeGrapth() {
   const [wordIndex, setWordIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
-  const [matrixColors, setMatrixColors] = useState([]); // LED 색상 저장
 
   const word = wordList[wordIndex];
 
@@ -61,26 +58,22 @@ export default function HomeGrapth() {
   // 자동 단어 전환
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimating(true); // 깜빡임 애니메이션 시작
+      setAnimating(true);
       setTimeout(() => {
         setWordIndex(prev => (prev + 1) % wordList.length);
         setAnimating(false);
-      }, 500); // 깜빡임 0.5초 후 단어 변경
+      }, 500);
     }, 1500);
     return () => clearInterval(interval);
   }, []);
 
 
-  const letterHeight = 5; // 글자 세로 크기
-  const gap = 1; // 글자 간 간격
-  // 글자 패턴을 1차원 배열로 변환
-  // const getLetterRows = (char) => developerPattern[char];
+  const letterHeight = 5;
+  const gap = 1;
 
-  // 각 요일별 LED 생성
   const matrix = days.map((day, dayIdx) => {
     const row = [];
     for (let char of word) {
-      // 글자 패턴에서 요일별로 표시 (dayIdx % letterHeight)
       row.push(...getLetterRows(char)[dayIdx % letterHeight], ...Array(gap).fill(0));
     }
     return row;
@@ -99,7 +92,7 @@ export default function HomeGrapth() {
           ))}
         </div>
 
-        {/* 요일 + LED 그리드 */}
+        {/* 요일 + 그리드 */}
         {days.map((day, rIdx) => (
           <div key={rIdx} className={styles.calendarRow} role="row">
             <div className={styles.dayCell} role="rowheader">{day}</div>

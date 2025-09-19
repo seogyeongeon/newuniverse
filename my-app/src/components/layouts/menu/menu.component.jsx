@@ -6,15 +6,13 @@ import styles from './menu.module.scss';
 
 const Menu = () => {
   const history = useHistory();
-  const [activeTab, setActiveTab] = useState("Overview");
+  const [activeTab, setActiveTab] = useState('Overview');
   const { items } = useProjectContext();
 
   const tabs = [
-    { name: "Overview", icon: "📖", url: '/' },
-    { name: "Project", icon: "📂", count: items?.length, url: '/project' },
-    { name: "About", icon: "⭐", url: '/resume' },
-    // { name: "Projects", icon: "📦" },
-    // { name: "Packages", icon: "📦" },
+    { name: 'Overview', icon: '📖', url: '/' },
+    { name: 'Project', icon: '📂', count: items?.length, url: '/project' },
+    { name: 'About', icon: '⭐', url: '/resume' },
   ];
 
   const handleClick = (tab) => {
@@ -23,35 +21,26 @@ const Menu = () => {
   };
 
   return (
-    <div className={styles.root}>
-      <div className={styles.profileNav}>
-        {/* <div className={styles.profileInfo}>
-          <img
-            className={styles.avatar}
-            src="https://avatars.githubusercontent.com/u/00000000?v=4"
-            alt="profile"
-          />
-          <span className={styles.username}>seogyeongeon</span>
-        </div> */}
-
-        <ul className={styles.tabs}>
-          {tabs.map((tab) => (
-            <li
-              key={tab.name}
-              className={clsx(styles.tabItem, activeTab === tab.name && styles.active)}
-              // onClick={() => setActiveTab(tab.name)}
+    <nav className={styles.root} aria-label="Main menu">
+      <ul className={styles.items}>
+        {tabs.map((tab) => (
+          <li key={tab.name} className={styles.item}>
+            <button
+              type="button"
               onClick={() => handleClick(tab)}
+              className={clsx(activeTab === tab.name && styles.active)}
+              aria-current={activeTab === tab.name ? 'page' : undefined}
             >
-              {/* <Link to={tab.url}> */}
               <span className={styles.icon}>{tab.icon}</span>
               {tab.name}
-              {tab.count && <span className={styles.count}>{tab.count}</span>}
-              {/* </Link> */}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+              {tab.count !== undefined && (
+                <span className={styles.count}>{tab.count}</span>
+              )}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 

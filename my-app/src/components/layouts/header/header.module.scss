@@ -1,34 +1,29 @@
 .root {
   display: flex;
   align-items: center;
+  gap: 1rem;
   background-color: #f6f8fa;
+  padding: 0 1rem;
   height: 56px;
-  padding: 0 20px;
 
   .menu {
     width: 32px;
     height: 32px;
     border: 1px solid #d1d9e0;
     border-radius: 4px;
-    // border-color: red;
-    align-items: center;
-    /* justify-items: center; */
     display: flex;
-    /* text-align: center; */
-    /* margin: auto; */
-    margin-right: 16px;
-  }
+    align-items: center;
+    justify-content: center;
+    background: white;
 
-  .menuIcon {
-    opacity: 0.8;
-    margin: auto;
+    .icon {
+      opacity: 0.8;
+      font-size: 1.25rem;
+    }
   }
-
-  .name {}
 
   .logo {
     width: 32px;
     height: 32px;
-    margin-right: 16px;
   }
 }

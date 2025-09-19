@@ -226,15 +226,3 @@ button {
     cursor: initial !important;
   }
 }
-
-* {
-  &:focus:not(:focus-visible) {
-    outline: none !important;
-  }
-}
-
-button:focus,
-textarea:focus,
-input[type='text']:focus {
-  outline: none !important;
-}
