@@ -44,12 +44,21 @@ const ProjectDetail = () => {
         <div className={styles.readme}>
           <div className={styles.title}><span>📖 READ ME</span></div>
 
-          {project.thumbnail && (
-            <div className={styles.imgWrap}>
-              <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
-            </div>
-          )}
-
+          {project.thumbnail &&
+            (Array.isArray(project.thumbnail) ? (
+              project.thumbnail.map((thumb, i) =>
+                thumb ? (
+                  <div key={i} className={styles.imgWrap}>
+                    <img src={thumb} alt={`${project.title} thumbnail ${i + 1}`} />
+                  </div>
+                ) : null
+              )
+            ) : (
+              <div className={styles.imgWrap}>
+                <img src={project.thumbnail} alt={`${project.title} thumbnail`} />
+              </div>
+            ))
+          }
           <div>✏️ 주요 역할: {project.role}</div>
           <div>🔧 도구: {project.tools}</div>
 
@@ -59,11 +68,19 @@ const ProjectDetail = () => {
             ))}
           </div>
 
-          {project.url && (
-            <a href={project.url} target="_blank" rel="noopener noreferrer">
-              <button>🔗 {project?.url}</button>
-            </a>
-          )}
+          {project.url &&
+            (Array.isArray(project.url)
+              ? project.url.map((link, i) => (
+                <a key={i} href={link} target="_blank" rel="noopener noreferrer">
+                  <button>🔗 {link}</button>
+                </a>
+              ))
+              : (
+                <a href={project.url} target="_blank" rel="noopener noreferrer">
+                  <button>🔗 {project.url}</button>
+                </a>
+              )
+            )}
         </div>
       </div>
     </div>

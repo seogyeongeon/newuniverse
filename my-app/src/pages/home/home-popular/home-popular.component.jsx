@@ -31,7 +31,7 @@ const HomePopular = () => {
       <ul className={styles.container}>
         {items.map((item) => (
           <li key={item.id}>
-            <ProjectItem item={item} />
+            <ProjectItem item={item} showImg={true} />
           </li>
         ))}
       </ul>

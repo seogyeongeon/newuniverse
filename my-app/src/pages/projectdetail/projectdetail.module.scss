@@ -121,16 +121,21 @@
   }
 
   .desc {
+    margin-top: 1rem;
     text-align: left;
   }
 
   button {
-    margin-top: 10px;
+    margin-top: 2rem;
     background-color: #2da44e;
     border: none;
     color: #fff;
     padding: 6px 12px;
     border-radius: 6px;
     cursor: pointer;
+
+    &:last-of-type {
+      margin-top: 1rem;
+    }
   }
 }

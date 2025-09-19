@@ -16,6 +16,7 @@ const ProjectItem = ({ item, showImg }) => {
     history.push(`/project/${id}`);
   };
 
+  const desc = item.desc?.split("\n").slice(0, 1);
   return (
     <article
       className={clsx(styles.root, showImg && styles.showImg)}
@@ -42,9 +43,14 @@ const ProjectItem = ({ item, showImg }) => {
             <span>{title}</span>
           </h3>
           <p className={styles.info}>
-            Forked from iamshaunjp/react-context-hooks. All the course files for the React Context API & Hooks tutorial series on the Net Ninja YouTube channel.
+            {desc.map((line, index) => (
+              <span key={index}>{line}<br /></span>
+            ))}
           </p>
-          <span className={clsx(styles.tool, [tool])}>{tool}</span>
+          <p className={styles.info}>
+            - {item?.tools}
+          </p>
+          <span className={clsx(styles.tool, styles[tool])}>{tool}</span>
         </div>
       </button>
     </article>
