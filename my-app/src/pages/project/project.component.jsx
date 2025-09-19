@@ -8,16 +8,15 @@ const Project = () => {
 
   return (
     <div className={styles.root}>
-      <div className={styles.info}>
-        <div className={styles.icon}>🗂️</div>
+      <div className={styles.top}>
+        <div className={styles.icon} role="img" aria-label="Project Folder">🗂️</div>
         <h2 className={styles.title}>Get Started with My Projects</h2>
         <p className={styles.subTitle}>Choose a project</p>
       </div>
 
       <div className={styles.container}>
-
         {items.map((item) => (
-          <ProjectItem item={item} showImg={true} />
+          <ProjectItem key={item.id} item={item} showImg={true} />
         ))}
       </div>
     </div>
