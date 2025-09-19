@@ -1,17 +1,33 @@
 .root {
+  min-width: 320px;
   width: 320px;
   height: 100%;
-  border: 1px solid black;
+  // border: 1px solid black;
   display: flex;
   justify-content: center;
   display: block;
   position: relative;
   overflow: hidden;
 
+  // margin-top: 32px;
+  // padding-top: 32px;
+  margin-right: 14px;
+
+  .desc {
+    word-break: keep-all;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: var(--base-text-weight-light, 300);
+    line-height: 24px;
+    color: black;
+    margin-top: 32px;
+  }
 
   .profile {
     display: flex;
-    align-items: center;
+    // align-items: center;
     flex-direction: column;
 
     .thumbnail {
@@ -19,7 +35,9 @@
       height: 300px;
       border-radius: 50%;
       overflow: hidden;
-      background-color: azure;
+      background-color: #eee;
+      // border: 2px solid #e1e1e1;
+      border: 2px solid hsla(0, 0%, 88%, 0.884);
 
       &>img {
         width: 100%;
@@ -29,18 +47,22 @@
 
     .info {
       margin: 16px 0;
+      color: #59636e;
+      text-align: left;
+      margin-bottom: 30px;
 
       .name {
         font-size: 24px;
         line-height: 1.25;
+        font-weight: 700;
       }
 
       .email {
+        margin-top: 10px;
         font-size: 20px;
         font-style: normal;
         font-weight: var(--base-text-weight-light, 300);
         line-height: 24px;
-        color: var(--fgColor-muted, var(--color-fg-muted));
       }
     }
 

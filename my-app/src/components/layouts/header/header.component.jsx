@@ -6,24 +6,18 @@ import styles from './header.module.scss';
 //todo,, 경로
 
 const Header = () => {
-  const [show, setShow] = useState(false);
-
-  const handleClick = () => {
-    setShow(true);
-  };
-
-  const handleClose = () => {
-    setShow(false);
-  };
-
   return (
     <div className={styles.root}>
-      <FiMenu onClick={handleClick} />
+      <div className={styles.menu}>
+
+        <FiMenu className={styles.menuIcon} />
+      </div>
       <img className={styles.logo} alt="logo" src={logo} />
 
-      {show && (
+      <div className={styles.name}>Seo GyeongEon</div>
+      {/* {show && (
         <Aside onClose={handleClose} />
-      )}
+      )} */}
     </div>
   );
 };

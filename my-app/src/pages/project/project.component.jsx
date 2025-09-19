@@ -1,21 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-// import { useProjectContext } from '../../hooks/useProjectContext';
+import ProjectItem from 'components/contents/project-item/project-item.component.jsx';
 import { useProjectContext } from 'hooks/useProjectContext';
+import styles from './project.module.scss';
 
 const Project = () => {
   const { items } = useProjectContext();
 
   return (
-    <div>
-      <h2>Project</h2>
+    <div className={styles.root}>
+      <div className={styles.info}>
+        <div className={styles.icon}>🗂️</div>
+        <h2 className={styles.title}>Get Started with My Projects</h2>
+        <p className={styles.subTitle}>Choose a project</p>
+      </div>
 
-      {items.map((p) => (
-        <li key={p.id}>
-          {/* 클릭 시 id 포함된 경로로 이동 */}
-          <Link to={`/project/${p.id}`}>{p.title}</Link>
-        </li>
-      ))}
+      <div className={styles.container}>
+
+        {items.map((item) => (
+          <ProjectItem item={item} showImg={true} />
+        ))}
+      </div>
     </div>
   );
 };

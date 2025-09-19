@@ -1,55 +1,145 @@
-@import '../../../assets/styles/utils/mixins';
-
+/* LEDSchedule.css */
 .root {
-  padding: 10px;
-  border: 1px solid #d0d7de;
+  // display: inline-block;
+  // background-color: #111;
+  // padding: 16px;
+  // border-radius: 8px;
   margin-top: 48px;
 
   .title {
-    color: #1f2328;
-    font-size: 16px;
-    font-size: 1rem;
-    font-weight: 400;
+    // color: #1f2328;
+    // font-size: 16px;
+    // font-size: 1rem;
+    // font-weight: 400;
     margin-bottom: 10px;
+
+    line-height: 24px;
+    flex: 1 1;
+    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 500;
   }
 
   .container {
-    max-width: 100%;
-    overflow-y: hidden;
-    overflow-x: auto;
+    display: inline-block;
+    // background-color: #111;
+    padding: 16px;
+    border: 1px solid #d0d7de;
+    /* padding: 16px; */
+    border-radius: 6px;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(11, 20px);
-    /* 한 달 최대 31일 */
-    grid-template-rows: repeat(1, 20px);
-    /* 월/요일 수에 맞게 조정 */
-    gap: 4px;
+  .headerRow {
+    display: flex;
+    justify-content: space-between;
+    /* 아이템 사이를 균등하게 */
+    margin-bottom: 8px;
+  }
+
+  .headerCell {
+    width: 24px;
+    text-align: center;
+    // color: #fff;
+    font-size: 12px;
+    margin-right: 4px;
+    flex: 1;
+    text-align: left;
+  }
+
+  .emptyCell {
+    width: 40px;
+    /* 요일 공간 확보 */
+  }
+
+  .calendarRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+
+  .dayCell {
+    width: 40px;
+    // color: #fff;
+    font-size: 12px;
+    margin-right: 4px;
   }
 
   .cell {
-    width: 20px;
-    height: 20px;
-    background-color: #ebedf0;
-    /* 기본 회색 */
-    border-radius: 3px;
+    width: 16px;
+    height: 16px;
+    background-color: #eff2f5;
+    border-radius: 4px;
+    margin-right: 4px;
+    transition: background 0.2s;
+    border: 0.5px solid #1f23280d;
+    transition: background 0.2s, box-shadow 0.2s;
+
+
+
+
+    // background-color: #222;
+    // border-radius: 50%;
+    // margin-right: 4px;
+
   }
 
-  /* 활동 레벨 색상 */
-  .level1 {
-    background-color: #c6e48b;
+  @keyframes blink {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.6;
+    }
   }
 
-  .level2 {
-    background-color: #7bc96f;
+  .anim {
+    animation: blink 0.5s ease forwards;
   }
 
-  .level3 {
-    background-color: #239a3b;
+  .cell.active {
+    background-color: #4caf50;
+    // box-shadow: 0 0 6px #4caf50, 0 0 12px #4caf50;
+    // animation: blink 1s infinite alternate;
   }
 
-  .level4 {
-    background-color: #196127;
+  .footer {
+    margin-top: 18px;
+    padding-left: 44px;
+    display: flex;
+    padding: 0 44px;
+    font-size: 13px;
+    margin-top: 24px;
+
+    .left {
+      flex: 1;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+    }
+
+    .wrap {
+      display: flex;
+
+      .cell {
+        display: flex;
+        margin-left: 3px;
+        width: 10px;
+        height: 10px;
+        margin-left: 2px;
+        border-radius: 2px;
+      }
+    }
   }
+
+  // .cell.active {
+  //   background-color: #4caf50;
+  //   /* LED 켜짐 색상 */
+  // }
 }
+
+// aceebb 4ac26b 2da44e 116329

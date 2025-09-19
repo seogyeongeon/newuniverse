@@ -1,6 +1,39 @@
 .root {
   width: 100%;
   height: 100%;
+  // margin-top: 32px;
+  // margin-bottom: 32px;
+
+  .btn {
+    font-size: 14px;
+    color: #0969da;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .projectWrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .date {
+    height: 14px;
+    border: 1px solid #d1d9e0;
+  }
+
+  .title {
+    line-height: 24px;
+    flex: 1;
+    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1f2328;
+  }
 
   .historyItems {
     display: grid;
@@ -14,7 +47,7 @@
 
   .container {
     grid-template-columns: repeat(2, minmax(0px, 1fr));
-    gap: 10px 10px;
+    gap: 15px 15px;
     display: grid;
     place-content: start center;
     place-items: start;
@@ -45,5 +78,9 @@
         top: 50%;
       }
     }
+  }
+
+  .company {
+    margin-top: 48px;
   }
 }

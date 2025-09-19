@@ -2,16 +2,29 @@
 
 .app {
   height: 100vh;
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
   display: flex;
-  height: 100%;
+  flex: 1;
+  padding: 0 32px;
+  padding-top: 50px;
+  justify-content: center;
+  min-height: 0;
+  align-items: flex-start;
+
+  overflow-y: auto;
+  scrollbar-gutter: stable;
 }
 
 .body {
   flex: 1;
+  max-width: 978px;
+  padding-bottom: 48px;
+  min-height: 100%;
+  box-sizing: border-box;
 }
 
 body {
