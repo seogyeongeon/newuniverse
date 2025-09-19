@@ -1,12 +1,12 @@
 import React, { createContext } from 'react';
 import djadmin from 'assets/images/djadmin.png';
 import player from 'assets/images/player.png';
-import player2 from 'assets/images/player2.jpg';
-import unify from 'assets/images/unify.gif';
+// import player2 from 'assets/images/player2.jpg';
+// import unify from 'assets/images/unify.gif';
 import assan from 'assets/images/assan.gif';
-import melonticket from 'assets/images/melonticket.png';
+// import melonticket from 'assets/images/melonticket.png';
 import event from 'assets/images/event.png';
-import rent from 'assets/images/rent.gif';
+// import rent from 'assets/images/rent.gif';
 export const ProjectContext = createContext();
 
 const defaultItems = [
