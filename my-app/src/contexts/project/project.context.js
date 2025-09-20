@@ -26,7 +26,7 @@ const defaultItems = [
     - Javascript를 활용한 UI/UX 설계 및 구현
     - 재사용 가능한 UI 컴포넌트 개발
     - Restful API를 활용한 비동기 백엔드 서비스와 연동
-    - 카카오 웹표준 가이드 반영`,
+    - 카카오 웹표준/접근성 가이드 반영`,
     url: 'https://www.melon.com/customer/serviceintro/index.htm',
     tool: 'javascript',
     thumbnail: player,
