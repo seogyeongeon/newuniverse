@@ -16,6 +16,7 @@
       width: 100%;
       height: auto;
       object-fit: cover;
+      object-fit: contain;
       border-radius: 0.25rem;
     }
   }
@@ -33,7 +34,6 @@
     overflow: hidden;
 
     .title {
-      @include line-clamp(1, 1.25rem);
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -44,6 +44,7 @@
       cursor: pointer;
 
       span {
+        @include line-clamp(1.25rem, 1);
         padding-left: 8px;
         color: #0969da;
       }
@@ -97,6 +98,8 @@
     .imgWrap {
       max-width: 100%;
       height: auto;
+      aspect-ratio: 3 / 2;
+      display: flex;
     }
 
     .detail {
