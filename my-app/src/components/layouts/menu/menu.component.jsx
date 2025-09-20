@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import { useProjectContext } from 'hooks/useProjectContext';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import styles from './menu.module.scss';
 
 const Menu = () => {
   const history = useHistory();
-  const [activeTab, setActiveTab] = useState('Overview');
+  const location = useLocation(); // 현재 URL 가져오기
   const { items } = useProjectContext();
 
   const tabs = [
@@ -16,9 +16,11 @@ const Menu = () => {
   ];
 
   const handleClick = (tab) => {
-    history.push(tab.url); // id를 URL에 포함시켜 이동
-    setActiveTab(tab.name);
+    history.push(tab.url);
   };
+
+  // URL 기반 active 
+  const activeTab = tabs.find(tab => tab.url === location.pathname)?.name;
 
   return (
     <nav className={styles.root} aria-label="Main menu">
