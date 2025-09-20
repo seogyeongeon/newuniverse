@@ -15,8 +15,8 @@ const Aside = () => {
           <p className={styles.name}>서경언</p>
           <p className={styles.email}>SeoGyeongEon</p>
           <p className={styles.desc}>
-            퍼블리셔로 시작해 프론트엔드까지, <br /> 새로운 도전과 꾸준함으로 성장해나는 개발자입니다.
-            {/* "퍼블리싱과 프론트엔드 가능한 UI 개발자, 새로운 도전과 꾸준함을 통해 끊임없는 성장을 추구합니다." */}
+            퍼블리셔로 시작해 프론트엔드까지, <br /> 새로운 도전과 꾸준함으로 성장해나가는 개발자입니다.
+            {/* 퍼블리싱과 프론트엔드가 가능한 UI 개발자,  <br /> 새로운 도전과 꾸준함을 통해 끊임없는 성장을 추구합니다. */}
           </p>
         </figcaption>
       </figure>
