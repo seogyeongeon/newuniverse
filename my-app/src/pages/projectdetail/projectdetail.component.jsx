@@ -72,12 +72,12 @@ const ProjectDetail = () => {
             (Array.isArray(project.url)
               ? project.url.map((link, i) => (
                 <a key={i} href={link} target="_blank" rel="noopener noreferrer">
-                  <button>🔗 {link}</button>
+                  <span>🔗 {link}</span>
                 </a>
               ))
               : (
                 <a href={project.url} target="_blank" rel="noopener noreferrer">
-                  <button>🔗 {project.url}</button>
+                  <span>🔗 {project.url}</span>
                 </a>
               )
             )}
