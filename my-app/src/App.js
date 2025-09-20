@@ -6,7 +6,7 @@ import Aside from 'components/layouts/aside/aside.component';
 import Home from 'pages/home/home/home.component';
 import Project from 'pages/project/project.component';
 import ProjectDetail from 'pages/projectdetail/projectdetail.component';
-import Resume from 'pages/resume/resume.component';
+import About from 'pages/about/about.component';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <div id="body" className="body">
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/resume" component={Resume} />
+            <Route path="/about" component={About} />
             <Route exact path="/project" component={Project} />           {/* 목록 페이지 */}
             <Route path="/project/:id" component={ProjectDetail} /> {/* 상세 페이지 */}
           </Switch>

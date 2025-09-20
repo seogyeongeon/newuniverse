@@ -11,7 +11,7 @@ export const Company = [
       '목업과 프론트엔드 개발 함께 진행',
       'React 기반 Javascript를 활용한 UI 설계 및 개발',
       'Restful API를 활용한 비동기 백엔드 서비스와 연동',
-      '카카오 웹표준 가이드 반영',
+      '카카오 웹표준/접근성 가이드 반영',
     ],
     reason: '',
   },
@@ -33,7 +33,7 @@ export const Company = [
   },
   {
     title: '대동티엘',
-    range: '2018.11 ~ 2019.12',
+    date: '2018.11 ~ 2019.12',
     range: 'November 2017 ~ August 2018',
     role: '퍼블리셔 · 멜론서비스개발팀',
     tasks: [
@@ -46,6 +46,7 @@ export const Company = [
   },
 ];
 
-export default {
-  Company,
-};
+// 👇 객체를 변수에 담고 export
+const data = { Company };
+
+export default data;

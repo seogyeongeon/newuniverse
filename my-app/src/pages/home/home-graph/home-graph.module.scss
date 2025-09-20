@@ -39,7 +39,7 @@
     border-radius: 0.25rem; // 4px
     margin-right: 4px;
     border: 0.03125rem solid #1f23280d; // 0.5px
-    transition: background 0.2s, box-shadow 0.2s;
+    transition: background-color 0.4s ease-in-out;
 
     &.active {
       background-color: #4caf50;

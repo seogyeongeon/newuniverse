@@ -12,7 +12,7 @@ const Menu = () => {
   const tabs = [
     { name: 'Overview', icon: '📖', url: '/' },
     { name: 'Project', icon: '📂', count: items?.length, url: '/project' },
-    { name: 'About', icon: '⭐', url: '/resume' },
+    { name: 'About', icon: '⭐', url: '/about' },
   ];
 
   const handleClick = (tab) => {

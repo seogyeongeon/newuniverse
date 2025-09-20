@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiLink } from 'react-icons/fi';
-import { AiOutlineMail } from 'react-icons/ai';
-import { MdOutlinePhoneAndroid } from 'react-icons/md';
+// import { AiOutlineMail } from 'react-icons/ai';
+// import { MdOutlinePhoneAndroid } from 'react-icons/md';
 import thumbnailPng from 'assets/images/emoji.png';
 import styles from './aside.module.scss';
 
@@ -26,8 +26,8 @@ const Aside = () => {
           <FiLink />
           <span >간단한이력서.com</span>
         </a>
-        <div><AiOutlineMail /> seoddaddo@naver.com</div>
-        <div><MdOutlinePhoneAndroid /> 010-2701-5717</div>
+        {/* <div><AiOutlineMail /> seoddaddo@naver.com</div>
+        <div><MdOutlinePhoneAndroid /> 010-2701-5717</div> */}
       </div>
     </aside>
   );
