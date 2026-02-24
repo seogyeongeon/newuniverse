@@ -26,8 +26,8 @@ const Aside = () => {
           <FiLink />
           <span >간단한이력서.com</span>
         </a>
-        {/* <div><AiOutlineMail /> seoddaddo@naver.com</div>
-        <div><MdOutlinePhoneAndroid /> 010-2701-5717</div> */}
+        <div><AiOutlineMail /> seoddaddo@naver.com</div>
+        <div><MdOutlinePhoneAndroid /> 010-2701-5717</div>
       </div>
     </aside>
   );
